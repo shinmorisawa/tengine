@@ -31,5 +31,5 @@ shared_library('tengine', srcs,
 static_library('tengine', srcs,
   include_directories: include,
   dependencies: [math_dep],
-  pic: true,
+  install: true # for non-thin archive
 )
