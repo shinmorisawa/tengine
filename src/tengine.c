@@ -130,6 +130,8 @@ void terminal_present(void) {
                 front_char_buffer[y * width + x] = back_char_buffer[y * width + x];
                 front_fg_color_buffer[y * width + x] = back_fg_color_buffer[y * width + x];
                 front_bg_color_buffer[y * width + x] = back_bg_color_buffer[y * width + x];
+                back_char_buffer[y * width + x] = '\0';
+                back_fg_color_buffer[y * width + x] = (ColorRGB) { .r = 1, .g = 1, .b = 1};
                 ColorRGB fg = front_fg_color_buffer[y * width + x];
                 ColorRGB bg = front_bg_color_buffer[y * width + x];
                 fg.r *= 255.0;
