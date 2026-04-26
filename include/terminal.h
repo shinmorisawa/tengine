@@ -1,6 +1,7 @@
 #pragma once
 
 #include "base.h"
+#include "color.h"
 
 void terminal_init(void);
 void terminal_kill(void);
@@ -12,3 +13,6 @@ void terminal_get_size(u16* w, u16* h);
 void terminal_alt_enter(void);
 void terminal_alt_exit(void);
 void terminal_flush(void);
+void terminal_set_color(ColorRGB fg, ColorRGB bg, int x, int y);
+void terminal_write(char c, ColorRGB fg, ColorRGB bg, int x, int y);
+void terminal_present(void);

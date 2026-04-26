@@ -566,4 +566,9 @@ ColorRGB linear_to_srgb(ColorRGB rgb) {
 
     return rgb;
 }
+
+bool color_rgb_different(ColorRGB a, ColorRGB b) {
+    if (a.r != b.r || a.g != b.g || a.b != b.b) return true;
+    return false;
+}
 #endif
