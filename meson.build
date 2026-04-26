@@ -32,5 +32,4 @@ static_library('tengine', srcs,
   include_directories: include,
   dependencies: [math_dep],
   pic: true,
-  gnu_symbolic: true
 )
