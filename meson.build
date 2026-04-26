@@ -24,9 +24,12 @@ cc = meson.get_compiler('c')
 math_dep = cc.find_library('m', required: true)
 
 shared_library('tengine', srcs,
-  include_directories: include
+  include_directories: include,
+  dependencies: [math_dep]
 )
 
 static_library('tengine', srcs,
-  include_directories: include
+  include_directories: include,
+  dependencies: [math_dep],
+  pic: true
 )

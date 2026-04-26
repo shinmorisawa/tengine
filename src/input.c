@@ -18,7 +18,7 @@ void update_input(void) {
 
         if (seq[0] == '[') {
             if (seq[1] >= '0' && seq[1] <= '9') {
-                read(STDIN_FILENO, &seq[2], 1);
+                (void)read(STDIN_FILENO, &seq[2], 1);
                 if (seq[2] == '~') {
                     switch (seq[1]) {
                         case '3': { e.keycode = KEY_DELETE; } break;
